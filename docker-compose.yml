@@ -52,9 +52,7 @@ services:
     image: grafana/tempo:latest
     ports:
       - "3200:3200"
-      - "4317:4317"
-      - "4318:4318"
-      - "9095:9095"
+      - "4319-4320:4317-4318"
     command: ["--config.file=/etc/tempo-config.yml"]
     volumes:
       - ./tempo-config.yml:/etc/tempo-config.yml
